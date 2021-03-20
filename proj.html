@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog api app</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style type="text/css">
+    body{
+        background-image: url("images/dog api background.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .countdownContainer{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform :translateX(-50%) translateY(-50%);
+        text-align:center;
+        background-color: transparent;
+        border:1px solid #999;
+        padding:10px;
+        box-shadow: 0 0 5px 3px #ccc;
+    }
+    .color{
+        color: aqua;
+    }
+    .info{
+        font-size:80px;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color:blue;">NYARANGA THE DEV</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Dog app</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="proj.html">New-proj idea</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link " href="vid.html" tabindex="-1" aria-disabled="true">Vid info</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <table class="countdownContainer color">
+          <tr class="info">
+              <td colspan="4" >New project Countdown</td>
+          </tr>
+          <tr>
+              <td id="days">120</td>
+              <td id="hours">4</td>
+              <td id="minutes">12</td>
+              <td id="seconds">12</td>
+          </tr>
+          <td>Days</td>
+          <td>Hours</td>
+          <td>Minutes</td>
+          <td>Seconds</td>
+      </table>
+
+
+
+      <script type="text/javascript">
+        function countdown(){
+            var now = new Date();
+            var eventDate = new Date(2021, 7, 22);
+
+            var currentTime = now.getTime();
+            var eventTime = eventDate.getTime();
+
+            var remTime = eventTime - currentTime;
+
+            var s = Math.floor(remTime /1000);
+            var m = Math.floor(s/60);
+            var h = Math.floor(m/60);
+            var d=Math.floor(h/24);
+
+            h %=24;
+            m %=60;
+            s %=60;
+
+            h = (h<10)? "0" + h:h;
+            m = (m<10)? "0" +m:m;
+            s = (s<10)? "0" +s:s;
+
+            document.getElementById("days").textContent = d;
+            document.getElementById("days").innerText = d;
+
+            document.getElementById("hours").textContent = h;
+            document.getElementById("minutes").textContent = m;
+            document.getElementById("seconds").textContent = s;
+
+            setTimeout(countdown, 1000);
+        }
+        countdown();
+    
+    </script>
+</body>
+</html>
