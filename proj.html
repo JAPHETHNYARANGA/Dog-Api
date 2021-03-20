@@ -22,8 +22,12 @@
         text-align:center;
         background-color: transparent;
         border:1px solid #999;
-        padding:10px;
+        padding:5px;
         box-shadow: 0 0 5px 3px #ccc;
+    
+    }
+    .new{
+        color:blue;
     }
     .color{
         color: aqua;
@@ -31,11 +35,16 @@
     .info{
         font-size:80px;
     }
-    @media  screen {
+    @media only screen and (max-width: 480px) {
         body {
-          width: auto;
-          object-fit: cover;
+          width: 100%;
+          height:100%;
         }
+        .countdownContainer{
+            width:30%;
+            height:30%;
+        }
+       
       }
     </style>
 </head>
@@ -51,35 +60,36 @@
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Dog app</a>
+                        <a class="nav-link active" aria-current="page" href="index.html" style="font-weight: bold;">Dog app</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="proj.html">New-proj idea</a>
+                        <a class="nav-link" href="proj.html" style="font-weight: bold;">New-proj idea</a>
                       </li>
                       
                       <li class="nav-item">
-                        <a class="nav-link " href="vid.html" tabindex="-1" aria-disabled="true">Vid info</a>
+                        <a class="nav-link " href="vid.html" tabindex="-1" aria-disabled="true" style="font-weight: bold;">Vid info</a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </nav>
+            
         </div>
 
-        <table class="countdownContainer color">
-            <tr class="info">
+        <table class="countdownContainer">
+            <tr class="info  color">
                 <td colspan="4" >New project Countdown</td>
             </tr>
-            <tr>
+            <tr class="new">
                 <td id="days">120</td>
                 <td id="hours">4</td>
                 <td id="minutes">12</td>
                 <td id="seconds">12</td>
             </tr>
-            <td>Days</td>
-            <td>Hours</td>
-            <td>Minutes</td>
-            <td>Seconds</td>
+            <td class="new">Days</td>
+            <td class="new">Hours</td>
+            <td class="new">Minutes</td>
+            <td class="new">Seconds</td>
         </table>
   
   
