@@ -11,7 +11,9 @@
     body{
         background-image: url("images/dog api background.jpeg");
         background-repeat: no-repeat;
-        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
         z-index: 11;
         
     }
@@ -27,9 +29,8 @@
         box-shadow: 0 0 5px 3px #ccc;
     
     }
-    .new{
-        color:blue;
-    }
+    
+    
     .color{
         color: aqua;
     }
@@ -80,8 +81,8 @@
         
      
 
-        <table class="countdownContainer">
-            <tr class="info  color">
+        <table class="countdownContainer color">
+            <tr class="info ">
                 <td colspan="4" >New project Countdown</td>
             </tr>
             <tr class="new">
@@ -90,10 +91,10 @@
                 <td id="minutes">12</td>
                 <td id="seconds">12</td>
             </tr>
-            <td class="new">Days</td>
-            <td class="new">Hours</td>
-            <td class="new">Minutes</td>
-            <td class="new">Seconds</td>
+            <td >Days</td>
+            <td >Hours</td>
+            <td >Minutes</td>
+            <td >Seconds</td>
         </table>
   
   
