@@ -15,6 +15,16 @@
   body{
       background-color: black;
   }
-  .btn :hover{
-
+  .button{
+      text-decoration: none;
+      background-color: cornflowerblue;
+      padding:10px;
+      border-radius: 15%;
+  }
+  .button:hover{
+      background-color: darkblue;
+  }
+  a{
+      color:black;
+      font-weight: bold;
   }
